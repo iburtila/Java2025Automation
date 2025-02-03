@@ -59,5 +59,8 @@ public class WebTableTest {
         WebElement departmentField = driver.findElement(By.id("department"));
         String departmentValue = "Contabilitate";
         departmentField.sendKeys(departmentValue);
+
+        WebElement submitField = driver.findElement(By.id("submit"));
+        submitField.click();
     }
 }
