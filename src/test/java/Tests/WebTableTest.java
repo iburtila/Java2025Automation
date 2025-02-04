@@ -23,8 +23,12 @@ public class WebTableTest {
         driver.manage().window().maximize();
 
         //facem un scroll
-        JavascriptExecutor js =(JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0.400)"); //0 este x si 400 este y
+        // Stating the Javascript Executor driver
+         JavascriptExecutor js = (JavascriptExecutor) driver;
+       // js.executeScript("window.scrollBy(0.1000)"); //0 este x si 400 este y
+        js.executeScript( "window.scrollTo(500,document.body.scrollHeight);");
+
+      //  ((JavascriptExecutor)driver).executeScript("window.scrollTo(0,document.body.scrollHeight);");
 
         //declaram un element
         WebElement elementsField=driver.findElement(By.xpath("//h5[text()='Elements']"));
